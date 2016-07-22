@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/spacelab/bootstrap.min.css" >
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="contactManagerHo.html">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="contactManagerAC.html">Add Contact</a></li>
+          <li><a href="contactManagerEC.html">Edit Contact</a></li>
+          <li><a href="contactManagerDC.html">Delete Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div>
+    <p>
+      <h1>Find a contact</h1>
+    </p>
+  </div>
+
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="inputFirstName" class="col-lg-2 control-label">Search by First Name</label>
+      <div class="col-xs-10">
+        <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+      </div>
+    </div>
+    <div>
+      <button class = "btn btn-primary btn-lg" id="findContact" type="button">Find Contact</button>
+    </div>
+  </form>
+  <div>
+
+  </div>
+
+<div class="container">
+  <table class="table table-striped">
+    <tr>
+      <th>First Name</th><th>Last Name</th><th>Email</th><th>Phone</th>
+    </tr>
+    <tbody id='table'></tbody>
+  </table><br/>
+</div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="contactManagerHo.js"></script>
+  </body>
+</html>

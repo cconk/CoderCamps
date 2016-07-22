@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Computer Configuration</title>
+  </head>
+  <body>
+    <form>
+      <!-- CPU -->
+      <fieldset>
+        <legend>Select your CPU:</legend>
+        <p>
+          <label><input name="CPU" type="radio" value="i3" />Intel i3</label>
+        </p>
+        <p>
+          <label><input name="CPU" type="radio" value="i4" />Intel i4</label>
+        </p>
+        <p>
+          <label><input name="CPU" type="radio" value="i7" />Intel i7</label>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select your RAM:</legend>
+        <p>
+          <label><input name="RAM" type="radio" value="8" />8GB</label>
+        </p>
+        <p>
+          <label><input name="RAM" type="radio" value="16" />16GB</label>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Features:</legend>
+        <p>
+          <label><input id="helmet" type="checkbox" />Virtual Reality Helment</label>
+        </p>
+        <p>
+          <label><input id="screen" type="checkbox" />3D Screen</label>
+        </p>
+        <p>
+          <label><input id="speakers" type="checkbox" />Stereo Speakers</label>
+        </p>
+      </fieldset>
+      <p>
+        <button>Submit</button>
+      </p>
+
+
+    </form>
+    <script>
+       /*********************************************************
+        *
+        *   Test Checkboxes/Radio Buttons Script
+        *
+        *********************************************************/
+        // loop through each form and handle submit event
+        for (var i=0;i<document.forms.length;i++) {
+          var form = document.forms[i];
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            var results = '';
+
+           // loop through all checkboxes to see if checked
+           var checkboxes = form.querySelectorAll("input[type='checkbox']");
+           for(var k = 0; k < checkboxes.length; k++) {
+             results += checkboxes[k].id + '=' + checkboxes[k].checked + '\n';
+           }
+           // loop through all radio butotns to display value
+           var radiobuttons = form.querySelectorAll("input[type='radio']:checked");
+           for(var m = 0; m < radiobuttons.length; m++) {
+             results += radiobuttons[m].name + '=' + radiobuttons[m].value + '\n';
+           }
+           // alert results
+           alert(results);
+         });
+       }
+    </script>
+
+  </body>
+</html>

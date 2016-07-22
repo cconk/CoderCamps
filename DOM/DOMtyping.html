@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>typing tutor</title>
+  </head>
+  <body>
+    <h1 id="result"></h1>
+    <h1 id="answer"></h1><br>
+    <input id = "dL" type = 'button' value = 'Start typing tutor' onclick='display()' /><br>
+    <input id = "sL" type = 'input' placeholder='Type the matching letter here...' style='width:60%' value = '' />
+
+    <script>
+      var submitLetter = document.getElementById('sL');
+      var answer = document.getElementById('answer');
+      var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+      var randomLetter = letters[Math.floor(Math.random()*letters.length)];
+
+      function display() {
+        console.log(randomLetter);
+        var result = document.getElementById('result');
+        result.innerHTML=randomLetter;
+        submitLetter.value = " "
+
+      };
+
+      submitLetter.addEventListener('keypress',function(e){
+        var char = String.fromCharCode(e.keyCode || e.which);
+        if (char == randomLetter) {
+          randomLetter = letters[Math.floor(Math.random()*letters.length)];
+          answer.innerHTML = " <p style= 'color:green'>Correct!</p>";
+          display();
+        } else {
+          answer.innerHTML = " <p style= 'color:red'>Wrong! Game over</p>";
+          e.preventDefault();
+          submitLetter.value = submitLetter.defaultValue;
+          submitLetter.placeholder = "Type the " + randomLetter + " key to start again!";
+        }
+      })
+    </script>
+
+
+  </body>
+</html>

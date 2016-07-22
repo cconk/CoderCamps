@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <button id="showMessage" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalContainer">
+        Add New Product
+      </button>
+
+      <div id="modalContainer" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" >&times;</button>
+              <h4 class="modal-title">Product Details</h4>
+            </div>
+            <div class="modal-body">
+              Product Name: <input id="prodName" type="text" name="prodName">
+              Product Price: <input id="prodPrice" type="text" name="prodPrice">
+            </div>
+            <div class="modal-footer">
+              <button id="saveDialog" type="button" class="btn btn-default" data-dimiss="modal">Save</button>
+              <button id="closeDialog" type="button" class="btn btn-default" data-dimiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script>
+    var btn = document.getElementById('saveDialog');
+    btn.addEventListener('click',saveProd);
+
+    function saveProd() {
+      var newProdname = document.getElementById('prodName').value;
+      console.log(newProdname);
+      var newProdprice = document.getElementById('prodPrice').value;
+      console.log(newProdprice);
+    }
+    </script>
+  </body>
+</html>

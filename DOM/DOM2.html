@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>
+          Name
+        </th>
+        <th>
+          Price
+        </th>
+        <tbody id='table'></tbody>
+      </thead>
+
+    </table>
+
+  <script>
+  // Display the following array of products in an HTML table. The values of the name and price fields should appear in different table columns.
+
+    var products = [
+     {name:'Bread', price:2.33},
+     {name:'Milk', price:1.99},
+     {name:'Cheese', price:5.00}
+    ];
+
+    var table = document.getElementById('table');
+    var holder = "";
+
+    for (var i = 0; i<products.length; i++) {
+      holder += "<tr>";
+      holder += "<td>" + products[i].name + "</td>";
+      holder += "<td>" + products[i].price + "</td>";
+      holder += "</tr>";
+    }
+
+    table.innerHTML = holder;
+
+  </script>
+
+
+  </body>
+</html>

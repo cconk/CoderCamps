@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kVo/Eh0sv7ZdiwZK32nRsp1FrDT3sLRLx3zVpSSTI9UdO5H02LJNLBg5F1gwvKg0" crossorigin="anonymous">
+    <link href="bagels.css" rel = "stylesheet">
+    <h1>Bagels Game</h1>
+  </head>
+  <body>
+    <p>
+      The computer game Bagels was created by Resek and Rowe from the Lawrence Hall of Science in Berkeley, California. In the game of Bagels, you must guess the number that the computer is thinking of.
+      The computer generates a three digit number where each digit must be unique. You are provided with 20 turns to guess the number. The computer can give the following hints in response to each guess:</br>
+      <p style = "margin-left:40px">
+        Pico - One digit correct but in the wrong position.</br>
+        Fermi - One digit correct and in the right position.</br>
+        Bagles - No digits correct.
+      </p>
+    </p>
+    <div>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="inputUserGuess" class="col-xs-3 control-label">Enter your guess here:</label>
+          <div class="col-xs-7">
+            <input type="number" class="form-control" id="inputUserGuess" placeholder="Enter a number between 0 and 999" min = "0" max="999" onKeyDown="if(this.value.length==3) this.value = this.value.slice(0, - 1);" ></br>
+            <button id="submitGuess" type="button" class = "btn btn-primary btn-lg">Submit Your Guess</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="results">
+      <label>Number of guesses:</label>
+      <div id='numGuesses'></div>
+      <label>Here is your previous guess:</label>
+      <div id='prevGuess'></div>
+      <label>And here is the result:</label>
+      <div id='prevResult'></div>
+    </div>
+  </form>
+
+
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="bagels.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+#left{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 25%;
+  height: 100%;
+  background: yellow;
+}
+
+#right{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 75%;
+  height: 100%;
+  background: lightblue;
+}

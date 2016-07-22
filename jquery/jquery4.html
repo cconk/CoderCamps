@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <img id="picture" />
+  <br />
+  <span id = 'title'></span>
+
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+
+    var url = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
+
+    $.getJSON(url)
+      .done(function(result) {
+        $('#picture').attr('src', result.url);
+        $('#title').html(result.title);
+      })
+      .fail(function(result){
+        console.error(result);
+      });
+
+  </script>
+  </body>
+</html>

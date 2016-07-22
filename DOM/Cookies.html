@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cookies</title>
+  </head>
+  <body>
+    <form id = "myform">
+      <span>Username: <input id = "username" /></span>
+      <span>Password: <input id = "password" type = "password" /></span>
+      <span>Remeber me: <input id = "rememberMe" type = "checkbox" /></span>
+      <button>Log in</button>
+    </form>
+
+    <script src="cookies.js"></script>
+
+    <script>
+      var username = document.getElementById('username');
+      var password = document.getElementById('password');
+      var remember = document.querySelector('input[type="checkbox"]');
+      var form = document.getElementById('myform');
+      username.value = docCookies.getItem('username');
+      password.value = docCookies.getItem('password');
+
+      form.addEventListener('submit',function(e){
+        if (remember.checked){
+          console.log('test');
+          docCookies.setItem('username',username.value,Infinity);
+          docCookies.setItem('password',password.value,Infinity);
+          username.value = docCookies.getItem('username');
+          password.value = docCookies.getItem('password');
+
+        }
+
+      });
+
+      remember.addEventListener('click',function(e){
+        if(remember.checked === false){
+          remember.checked === true
+        } else{
+          remember.checked === false;
+        }
+      });
+
+    </script>
+
+  </body>
+</html>

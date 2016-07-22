@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blink</title>
+  </head>
+  <body>
+    <span id= "blink">Blink</span>
+
+    <script>
+      var blink = document.getElementById("blink");
+      window.setInterval(function(){
+        if(blink.style.visibility == "hidden"){
+          blink.style.visibility = "";
+        } else {
+          blink.style.visibility = "hidden";
+        }
+      },40);
+
+    </script>
+
+
+
+  </body>
+</html>
