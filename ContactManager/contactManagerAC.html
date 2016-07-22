@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/spacelab/bootstrap.min.css" >
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="contactManagerHo.html">Home<span class="sr-only">(current)</span></a></li>
+          <li><a href="contactManagerAC.html">Add Contact</a></li>
+          <li><a href="contactManagerEC.html">Edit Contact</a></li>
+          <li><a href="contactManagerDC.html">Delete Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="inputFirstName" class="col-xs-3 control-label">First Name</label>
+      <div class="col-xs-7">
+        <input type="text" class="form-control" id="inputFirstName" required placeholder="First Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputLastName" class="col-xs-3 control-label">Last Name</label>
+      <div class="col-xs-7">
+        <input type="text" class="form-control" id="inputLastName" required placeholder="Last Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="col-xs-3 control-label">Email</label>
+      <div class="col-xs-7">
+        <input type="email" class="form-control" id="inputEmail" name = "email" placeholder="Email" required >
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPhoneNum" class="col-xs-3 control-label">Phone Number</label>
+      <div class="col-xs-7">
+        <input type="phone" class="form-control" id="inputPhoneNum" placeholder="Phone Number (xxx-xxx-xxxx)">
+      </div>
+    </div>
+    <button id="addNewContact" type="button" class = "btn btn-primary btn-lg">Add New Contact</button>
+    <button id="cancelNewContact" type="button" class = "btn btn-primary btn-lg">Cancel</button>
+</form>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="contactManagerAC.js"></script>
+  </body>
+</html>

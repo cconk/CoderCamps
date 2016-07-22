@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form id="myForm">
+    <div>
+      <span>Number 1:<input id="number1" type = 'integer' /></span>
+    </div>
+    <div>
+      <span>Number 2:<input id="number2" type = 'integer' /></span>
+    </div>
+    <button>Submit</button>
+  </form>
+
+  <span id = 'result'></span>
+
+
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $('#myForm').click('submit', function(e) {
+      e.preventDefault();
+
+      // convert form to object
+      var total = parseFloat($('#number1').val()) + parseFloat($('#number2').val());
+
+
+      //parseFloat(number1.value) + parseFloat(number2.value);
+
+
+      console.log(total);
+       $('#result').html(total);
+    });
+    // Use jQuery to handle the submit event.
+    // Use jQuery selectors to retrieve the values of the form fields (use the jQuery val() method).
+    // Use a jQuery selector to retrieve the SPAN element and jQuery to display the results (use the jQuery html() method).
+
+
+  </script>
+
+  </body>
+</html>

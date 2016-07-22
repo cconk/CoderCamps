@@ -1,0 +1,9 @@
+#target{
+  width:200px;
+  height:200px;
+  background-color: rgb(0%,100%,0%);
+}
+
+#target:hover{
+  background-color: rgba(0%,100%,0%,0.5);
+}

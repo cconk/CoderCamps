@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/spacelab/bootstrap.min.css" >
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="contactManagerHo.html">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="contactManagerAC.html">Add Contact</a></li>
+          <li><a href="contactManagerEC.html">Edit Contact</a></li>
+          <li><a href="contactManagerDC.html">Delete Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <table class="table table-striped">
+      <tr>
+        <th>First Name</th><th>Last Name</th><th>Email</th><th>Phone</th><th>Edit Contact</th>
+      </tr>
+      <tbody id='table'></tbody>
+    </table><br/>
+  </div>
+
+  <div id="modalContainer2" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Edit Contact</h4>
+        </div>
+        <div class="modal-body">
+          <form id = "editConfirmform" class="form-horizontal">
+            <div class="form-group">
+              <label for="contactFirstName" class="col-xs-2 control-label">First Name:</label>
+              <div class="col-xs-10">
+                <input id="contactFirstName" type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactLastName" class="col-xs-2 control-label">Last Name:</label>
+              <div class="col-xs-10">
+                <input id="contactLastName" type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail" class="col-xs-2 control-label">Email:</label>
+              <div class="col-xs-10">
+                <input id="contactEmail" type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactPhoneNum" class="col-xs-2 control-label">Phone Number:</label>
+              <div class="col-xs-10">
+                <input id="contactPhoneNum" type="text" class="form-control" />
+              </div>
+            </div>
+            <button id="saveDialog" type="button" class="btn btn-default" data-dimiss="modal">Save</button>
+            <button id="cancelDialog" type="button" class="btn btn-default" data-dimiss="modal">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="contactManagerEC.js"></script>
+  </body>
+</html>

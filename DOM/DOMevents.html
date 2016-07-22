@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id='btn1'>Increment</button>
+    <button id='btn2'>decrement</button>
+    <div id='output'></div>
+
+
+    <script>
+      var btn1 = document.getElementById('btn1');
+      var btn2 = document.getElementById('btn2');
+      var value = 0;
+
+
+      btn1.addEventListener('click',function(){
+        value += 1;
+        document.getElementById('output').innerHTML = value;
+      })
+
+      btn2.addEventListener('click',function(){
+        value -= 1;
+        document.getElementById('output').innerHTML = value;
+      })
+
+
+
+    </script>
+
+
+  </body>
+</html>

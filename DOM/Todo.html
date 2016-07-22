@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To Do's</title>
+    <link href ="Todo.css" rel ="stylesheet" />
+  </head>
+  <body>
+    <h1>My To Do List</h1><br/>
+    <div class="container">
+      <form>
+        <label>
+            New task: <input id='taskName' type = 'text'>
+        </label>
+            <input id='submitNewTask' type = 'button' value = 'Submit New Task'>
+
+      </form><br/>
+  </div>
+  <div class="container">
+    <table border="1">
+      <tr>
+        <th>Index</th><th>Name</th><th>Date Created</th><th>Is Complete</th>
+      </tr>
+      <tbody id='table'></tbody>
+    </table><br/>
+    <input id='saveChanges' type = 'button' value = 'Save Changes'>
+    <input id='clearList' type = 'button' value = 'Clear List'>
+  </div>
+    <script src="Todo.js"></script>
+  </body>
+</html>

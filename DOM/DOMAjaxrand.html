@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Coin Flip</title>
+  </head>
+  <body>
+
+    <input type="button" id="coinflip" value="Coin Flip"><br />
+    <span id = "Coin"></span>
+
+    <script>
+      function coinFlip() {
+         var url = 'https://qrng.anu.edu.au/API/jsonI.php?length=1&type=uint8';
+         var request = new XMLHttpRequest();
+         // perform a GET request
+         request.open('GET', url);
+
+         // handle the response
+         request.addEventListener('load', function (e) {
+             // parse the data from JSON
+             var randTxt = JSON.parse(request.responseText);
+             console.log(randTxt);
+             var randomVal = randTxt.data;
+             console.log(randomVal);
+             // display coin value
+             if (randomVal <= 127) {
+               document.getElementById('Coin').innerHTML = 'Tails';
+            } else {
+              document.getElementById('Coin').innerHTML = 'Heads';
+            }
+
+         });
+
+         // kick off the request
+         request.send();
+
+        }
+        var search = document.getElementById('coinflip');
+        search.addEventListener('click',coinFlip);
+
+     </script>
+
+
+  </body>
+</html>
